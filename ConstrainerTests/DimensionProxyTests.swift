@@ -38,20 +38,6 @@ class DimensionProxyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testThatItSetsTranslatesAutoresizingMaskIntoConstraintsToFalse() {
-        // given
-        XCTAssert(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssert(view2.translatesAutoresizingMaskIntoConstraints)
-        
-        // when
-        view1.width == 1337
-        view2.height == view1.safeArea.width * 0.75 - 16 ~ .defaultLow
-        
-        // then
-        XCTAssertFalse(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssertFalse(view2.translatesAutoresizingMaskIntoConstraints)
-    }
-    
     func testThatItCreatesAWidthConstraint() {
         // when
         let constraint = view1.width == 1337

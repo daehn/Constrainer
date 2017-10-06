@@ -38,19 +38,6 @@ class AnchorProxyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testThatItSetsTranslatesAutoresizingMaskIntoConstraintsToFalse() {
-        // given
-        XCTAssert(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssert(view2.translatesAutoresizingMaskIntoConstraints)
-        
-        // when
-        view1.margins.top == view2.safeArea.centerY
-        
-        // then
-        XCTAssertFalse(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssertFalse(view2.translatesAutoresizingMaskIntoConstraints)
-    }
-    
     func testThatItCreatesALeadingConstraint() {
         // when
         let constraint = view1.leading == view2.trailing

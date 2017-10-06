@@ -38,19 +38,6 @@ class EdgesProxyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testThatItSetsTranslatesAutoresizingMaskIntoConstraintsToFalse() {
-        // given
-        XCTAssert(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssert(view2.translatesAutoresizingMaskIntoConstraints)
-        
-        // when
-        view1.edges == view2.edges
-        
-        // then
-        XCTAssertFalse(view1.translatesAutoresizingMaskIntoConstraints)
-        XCTAssertFalse(view2.translatesAutoresizingMaskIntoConstraints)
-    }
-    
     func testThatItCreatesConstraintsForAllEdges() {
         // when
         let constraints = view1.edges == view2.edges

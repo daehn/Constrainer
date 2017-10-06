@@ -27,15 +27,7 @@ extension NSLayoutConstraint {
         if let priority = priority {
             self.priority = priority
         }
-        ensureNotTranslatingAutoresizingMaskIntoConstaints()
         isActive = true
         return self
-    }
-    
-    func ensureNotTranslatingAutoresizingMaskIntoConstaints() {
-        let firstView = firstItem as? UIView ?? (firstItem as? UILayoutGuide)?.owningView
-        let secondView = secondItem as? UIView ?? (secondItem as? UILayoutGuide)?.owningView
-        firstView?.translatesAutoresizingMaskIntoConstraints = false
-        secondView?.translatesAutoresizingMaskIntoConstraints = false
     }
 }

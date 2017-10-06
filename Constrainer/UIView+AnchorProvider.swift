@@ -23,6 +23,7 @@
 import UIKit
 
 extension UIView: AnchorProviderType {
+    
     public var width:            DimensionProxy                   { return DimensionProxy(anchor: widthAnchor)      }
     public var height:           DimensionProxy                   { return DimensionProxy(anchor: heightAnchor)     }
     public var left:             AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: leftAnchor)          }
