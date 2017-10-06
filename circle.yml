@@ -1,8 +1,0 @@
-machine:
-  xcode:
-    version: "9.0"
-
-test:
-  override:
-    - xcodebuild build test -scheme Constrainer -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
-    - bash <(curl -s https://codecov.io/bash)
