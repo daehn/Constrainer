@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 import XCTest
-@testable import Constrainer
+import Constrainer
 
 class DimensionProxyTests: XCTestCase {
     
@@ -97,6 +97,54 @@ class DimensionProxyTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, .fittingSizeLevel)
         XCTAssertEqual(constraint.relation, .equal)
+        XCTAssert(constraint.isActive)
+    }
+    
+    func testThatItCreatesAHeightConstraint_CustomPriority() {
+        // when
+        let constraint = view1.height == view2.width ~ 42.0
+        
+        // then
+        XCTAssertEqual(constraint.firstAttribute, .height)
+        XCTAssertEqual(constraint.secondAttribute, .width)
+        XCTAssertEqual(constraint.firstItem as? UIView, view1)
+        XCTAssertEqual(constraint.secondItem as? UIView, view2)
+        XCTAssertEqual(constraint.constant, 0)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(42))
+        XCTAssertEqual(constraint.relation, .equal)
+        XCTAssert(constraint.isActive)
+    }
+    
+    func testThatItCreatesAHeightConstraint_LessThanOrEqual() {
+        // when
+        let constraint = view1.height <= 42
+        
+        // then
+        XCTAssertEqual(constraint.firstAttribute, .height)
+        XCTAssertEqual(constraint.secondAttribute, .notAnAttribute)
+        XCTAssertEqual(constraint.firstItem as? UIView, view1)
+        XCTAssertNil(constraint.secondItem)
+        XCTAssertEqual(constraint.constant, 42)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, .required)
+        XCTAssertEqual(constraint.relation, .lessThanOrEqual)
+        XCTAssert(constraint.isActive)
+    }
+    
+    func testThatItCreatesAHeightConstraint_GreaterThanOrEqual() {
+        // when
+        let constraint = view1.width >= 1337
+        
+        // then
+        XCTAssertEqual(constraint.firstAttribute, .width)
+        XCTAssertEqual(constraint.secondAttribute, .notAnAttribute)
+        XCTAssertEqual(constraint.firstItem as? UIView, view1)
+        XCTAssertNil(constraint.secondItem)
+        XCTAssertEqual(constraint.constant, 1337)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, .required)
+        XCTAssertEqual(constraint.relation, .greaterThanOrEqual)
         XCTAssert(constraint.isActive)
     }
     

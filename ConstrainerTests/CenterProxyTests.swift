@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 import XCTest
-@testable import Constrainer
+import Constrainer
 
 class CenterProxyTests: XCTestCase {
     

@@ -93,11 +93,11 @@ public struct DimensionPriority {
 }
 
 prefix operator ~
-func ~(lhs: CGFloat, rhs: UILayoutPriority) -> DimensionPriority {
+public func ~(lhs: CGFloat, rhs: UILayoutPriority) -> DimensionPriority {
     return DimensionPriority(constant: lhs, priority: rhs)
 }
 
-func ~(lhs: CGFloat, rhs: Float) -> DimensionPriority {
+public func ~(lhs: CGFloat, rhs: Float) -> DimensionPriority {
     return lhs ~ UILayoutPriority(rhs)
 }
 
