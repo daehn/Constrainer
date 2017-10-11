@@ -27,6 +27,8 @@ extension NSLayoutConstraint {
         if let priority = priority {
             self.priority = priority
         }
+        let leftView = (firstItem as? UIView) ?? (firstItem as? UILayoutGuide)?.owningView
+        leftView?.translatesAutoresizingMaskIntoConstraints = false
         isActive = true
         return self
     }

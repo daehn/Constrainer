@@ -11,7 +11,6 @@ label.edges <= labelContainerView.margins.edges
 let widthConstraint = view.width >= imageView.height / 2 ~ .defaultLow
 ```
 
-Constrainer does currently **NOT** set `translatesAutoresizingMaskIntoConstraints` to `false` but sets  `isActive` to `true` for all created constraints in a expression.
 All expressions return a `NSLayoutConstraint` (or an array of `NSLayoutConstraint` when using `edges` or `center`), which can be stored and used to modify / deactivate the constraint at a later point.
 
 All available properties to construct constraints using Constrainer are:
