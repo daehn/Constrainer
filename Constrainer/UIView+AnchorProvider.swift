@@ -24,18 +24,18 @@ import UIKit
 
 extension UIView: AnchorProviderType {
     
-    public var width:            DimensionProxy                   { return DimensionProxy(anchor: widthAnchor)      }
-    public var height:           DimensionProxy                   { return DimensionProxy(anchor: heightAnchor)     }
-    public var left:             AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: leftAnchor)          }
-    public var leading:          AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: leadingAnchor)       }
-    public var right:            AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: rightAnchor)         }
-    public var trailing:         AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: trailingAnchor)      }
-    public var centerX:          AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: centerXAnchor)       }
-    public var centerY:          AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: centerYAnchor)       }
-    public var top:              AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: topAnchor)           }
-    public var bottom:           AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: bottomAnchor)        }
-    public var firstBaseline:    AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: firstBaselineAnchor) }
-    public var lastBaseline:     AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: lastBaselineAnchor)  }
+    public var width:         DimensionProxy                   { return DimensionProxy(anchor: widthAnchor)      }
+    public var height:        DimensionProxy                   { return DimensionProxy(anchor: heightAnchor)     }
+    public var left:          AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: leftAnchor)          }
+    public var leading:       AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: leadingAnchor)       }
+    public var right:         AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: rightAnchor)         }
+    public var trailing:      AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: trailingAnchor)      }
+    public var centerX:       AnchorProxy<NSLayoutXAxisAnchor> { return AnchorProxy(anchor: centerXAnchor)       }
+    public var centerY:       AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: centerYAnchor)       }
+    public var top:           AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: topAnchor)           }
+    public var bottom:        AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: bottomAnchor)        }
+    public var firstBaseline: AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: firstBaselineAnchor) }
+    public var lastBaseline:  AnchorProxy<NSLayoutYAxisAnchor> { return AnchorProxy(anchor: lastBaselineAnchor)  }
     
     public var margins: AnchorProvider {
         return AnchorProvider(
