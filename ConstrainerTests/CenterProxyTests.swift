@@ -90,11 +90,11 @@ class CenterProxyTests: XCTestCase {
         _ constraints: [NSLayoutConstraint],
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required,
-        relation: NSLayoutRelation = .equal,
+        relation: NSLayoutConstraint.Relation = .equal,
         file: StaticString = #file,
         line: UInt = #line
         ) {
-        [NSLayoutAttribute.centerY, .centerX].forEach { attribute in
+        [NSLayoutConstraint.Attribute.centerY, .centerX].forEach { attribute in
             guard let constraint = constraints.first(where: { $0.firstAttribute == attribute }) else { return XCTFail(file: file, line: line) }
             XCTAssertEqual(constraint.constant, constant, file: file, line: line)
             XCTAssertEqual(constraint.multiplier, 1, file: file, line: line)

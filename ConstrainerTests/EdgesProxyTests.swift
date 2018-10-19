@@ -163,11 +163,11 @@ class EdgesProxyTests: XCTestCase {
         _ constraints: [NSLayoutConstraint],
         constant: CGFloat = 0,
         priority: UILayoutPriority = .required,
-        relation: NSLayoutRelation = .equal,
+        relation: NSLayoutConstraint.Relation = .equal,
         file: StaticString = #file,
         line: UInt = #line
         ) {
-        [NSLayoutAttribute.top, .bottom, .leading, .trailing].forEach { attribute in
+        [NSLayoutConstraint.Attribute.top, .bottom, .leading, .trailing].forEach { attribute in
             guard let constraint = constraints.first(where: { $0.firstAttribute == attribute }) else { return XCTFail(file: file, line: line) }
             XCTAssertEqual(constraint.constant, (attribute == .bottom || attribute == .trailing) ? constant : -constant, file: file, line: line)
             XCTAssertEqual(constraint.multiplier, 1, file: file, line: line)
