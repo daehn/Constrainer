@@ -1,6 +1,6 @@
 # Constrainer
 
-[![Build Status](https://travis-ci.org/daehn/Constrainer.svg?branch=develop)](https://travis-ci.org/daehn/Constrainer) [![codecov](https://codecov.io/gh/daehn/Constrainer/branch/develop/graph/badge.svg)](https://codecov.io/gh/daehn/Constrainer) ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
+[![Build Status](https://travis-ci.org/daehn/Constrainer.svg?branch=develop)](https://travis-ci.org/daehn/Constrainer) [![codecov](https://codecov.io/gh/daehn/Constrainer/branch/develop/graph/badge.svg)](https://codecov.io/gh/daehn/Constrainer) ![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Constrainer is meant to be a lightweight AutoLayout helper. Constrainer exposes several properties on `UIView` that can be used to construct layout constraints using operators. This mostly was an experiment to see how much of [Cartography](https://github.com/robb/Cartography)'s functionality can be replicated without using proxies only accessible in closures and the syntax of Constrainer is this heavily inspired by [Cartography](https://github.com/robb/Cartography).
